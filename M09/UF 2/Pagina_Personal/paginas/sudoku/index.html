@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>SUDOKU</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+
+  <!-- PARA MOVILES -->
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=0.6, minimum-scale=0.6">
+  <!-- FONT ROBOTO -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <!-- ICONS AWESOME -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="loader.js"></script>
+</head>
+
+<body onload="Cargado();">
+  <!-- CARGANDO -->
+  <div class="Message" id="cargando">
+    <h1>Loading...</h1>
+    <br /><br />
+    <i class="fa fa-cog fa-spin fa-3x fa-fw"></i>
+  </div>
+
+  <!-- MENU -->
+  <div class="block">
+    <h1>SUDOKU</h1>
+    <br><br>
+    <form action="game.html" method="get">
+      <h2>Choose a level:</h2>
+      <input id="level1" type="radio" name="level" value="0" checked>
+        <label for="level1"><img src="assets/nue/c1.png"/></label>
+      <input id="level2" type="radio" name="level" value="1">
+        <label for="level2"><img src="assets/nue/c2.png"/></label>
+      <input id="level3" type="radio" name="level" value="2">
+        <label for="level3"><img src="assets/nue/c3.png"/></label>
+      <input id="level4" type="radio" name="level" value="3">
+        <label for="level4"><img src="assets/nue/c4.png"/></label>
+      <input id="level5" type="radio" name="level" value="4">
+        <label for="level5"><img src="assets/nue/c5.png"/></label>
+      <br>
+      <br>
+      <h2>Choose a drawing:</h2>
+      <input id="ficha2" type="radio" name="ficha" value="assets/sudoku2/" checked>
+        <label for="ficha2"><img src="assets/sudoku2/logo.png"/></label>
+      <input id="ficha1" type="radio" name="ficha" value="assets/sudoku1/">
+        <label for="ficha1"><img src="assets/sudoku1/logo.png"/></label>
+      <input id="ficha6" type="radio" name="ficha" value="assets/sudoku6/">
+        <label for="ficha6"><img src="assets/sudoku6/logo.png"/></label>
+      <input id="ficha3" type="radio" name="ficha" value="assets/sudoku3/">
+        <label for="ficha3"><img src="assets/sudoku3/logo.png"/></label>
+      <input id="ficha8" type="radio" name="ficha" value="assets/sudoku8/">
+        <label for="ficha8"><img src="assets/sudoku8/logo.png"/></label>
+      <input id="ficha0" type="radio" name="ficha" value="assets/sudoku0/">
+        <label for="ficha0"><img src="assets/sudoku0/logo.png"/></label>
+      <br>
+      <br>
+      <button type="submit"  class="buttonBlue">PLAY</button>
+    </form>
+  </div>
+</body>
+
+</html>

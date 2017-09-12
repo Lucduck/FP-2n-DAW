@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>SUDOKU</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+
+  <!-- PARA MOVILES -->
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=0.6, minimum-scale=0.6">
+  <!-- FONT ROBOTO -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <!-- ICONS AWESOME -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+  <script>
+    var loc = document.location.href;
+    var getString = loc.split('?')[1];
+    if(getString != undefined){
+      var GET = getString.split('&');
+      var get = {};
+
+      for(var i = 0, l = GET.length; i < l; i++){
+          var tmp = GET[i].split('=');
+          get[tmp[0]] = unescape(decodeURI(tmp[1]));
+      }
+      var ruta_fichas = get['ficha'];
+      var nivel = parseInt(get['level']);
+    } else {
+      var ruta_fichas = 'assets/sudoku2/';
+      var nivel = 0;
+    }
+  </script>
+  
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="game.css">
+  <script src="tableros.js"></script>
+  <script src="sudoku.js"></script>
+  
+  <script src="loader.js"></script>
+
+</head>
+
+<body onload="Cargado();">
+  <!-- CARGANDO -->
+  <div class="Message" id="cargando">
+    <h1>Loading...</h1>
+    <br /><br />
+    <i class="fa fa-cog fa-spin fa-3x fa-fw"></i>
+  </div>
+  <!-- CONTENIDO -->
+  <div id="content">
+    <table class="lineas">
+      <script>
+        for(var i = 0; i < 4; i++){
+            document.write('<tr>');
+          for(var j = 0;  j < 4;  j++){
+            document.write('<th></th>');
+          }
+            document.write('</tr>');
+        }
+      </script>
+    </table>
+    <div id="cardSlots"></div>
+    <div id="cardPile"></div>
+    <div onclick="refresh()" class="refresh">
+      <span class="fa-stack fa-lg fa-4x">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-refresh fa-stack-1x fa-inverse"></i>
+      </span>
+    </div>
+    <div onclick="window.location='index.html'" class="home">
+      <span class="fa-stack fa-lg fa-4x">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-home fa-stack-1x fa-inverse "></i>
+      </span>
+    </div>
+    <div id="basura"></div>
+  </div>
+
+  <!-- GANAR -->
+  <div class="Message" id="successMessage">
+    <h1>CONGRATULATIONS!!!</h1>
+    <h1>IS FINISHED</h1>
+    <button class="buttonBlue" onclick="init()">Play Again</button>
+    <br/>
+    <button class="buttonRed" onclick="window.location='index.html'"><i class="fa fa-home fa-inverse "></i></button>
+  </div>
+
+  <!-- PERDER -->
+  <div class="Message" id="wrongMessage">
+    <h1>OH NOES!</h1>
+    <h1>Try again</h1>
+    <button class="buttonGreen" onclick="hidemessage('#wrongMessage')">Continue</button>
+    <br>
+    <button class="buttonBlue" onclick="init()">Play Again</button>
+    <br>
+    <button class="buttonRed" onclick="window.location='index.html'"><i class="fa fa-home fa-inverse "></i></button>
+  </div>
+</body>
+
+</html>
