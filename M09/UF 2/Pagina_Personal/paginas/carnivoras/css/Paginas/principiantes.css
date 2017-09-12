@@ -1,0 +1,50 @@
+img.pos1{
+    height: 130px;
+    vertical-align: middle;
+}
+img.pos2{
+    height: 150px;
+    margin-right: 10px;
+    float: left;
+}
+#ClassGeneral td, #ClassGeneral th{
+    text-align: center;
+    width: 25%;
+    background-color: ghostwhite;
+}
+
+/*  SUSTRATOS => ARTICULOS  */
+#Sustratos{
+    text-align: center;
+}
+#turbaRubia{
+    background-image: url(../../img/Principiantes/701.PNG);
+}
+#musgoSphagnum{
+    background-image: url(../../img/Principiantes/702.PNG);
+}
+#perlita{
+    background-image: url(../../img/Principiantes/703.PNG);
+}
+#arenaCuarzo{
+    background-image: url(../../img/Principiantes/704.PNG);
+}
+#arlita{
+    background-image: url(../../img/Principiantes/705.PNG);
+}
+#vermiculita{
+    background-image: url(../../img/Principiantes/706.PNG);
+}
+#cortezaPino{
+    background-image: url(../../img/Principiantes/707.PNG);
+}
+
+
+
+/*  @MEDIA = 450px  */
+@media(max-width:450px){
+/*    Letra tabla  */
+    #ClassGeneral td, #ClassGeneral th{
+        font-size: 12px;
+    }
+}
