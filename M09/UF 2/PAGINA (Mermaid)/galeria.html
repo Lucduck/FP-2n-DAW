@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="img/favicon.ico">
+	<title>LUDUCK</title>
+<!-- PARA MOVILES -->
+    <meta name='viewport' content='width=device-width, user-scalable=no, initial-scale=1, maximum-scale=0.9, minimum-scale=0.9'>
+    
+<!-- FONT ROBOTO -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+
+<!-- ICONS AWESOME -->
+    <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'  type='text/css' rel='stylesheet'>
+
+<!--   CSS   -->
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/estil.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/Paginas/galeria.css">
+    
+<!-- JQUERY -->
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    
+    
+<!--  JS  -->
+	<script src="js/ir-arriba.js"></script>
+</head>
+<body>
+    
+    <a href="#"><span class="ir-arriba fa fa-chevron-up"></span></a>
+    
+	<header>
+        <h1 class="titleIndex">Mermaid</h1>
+        <h2 class="titleIndex2">Galeria</h2>
+        <input type="checkbox" id="btn-menu">
+        <label for="btn-menu">
+            <div id="burger">
+                <div class="click"></div>
+                <span></span>
+            </div>
+        </label>
+        <div class="menu">
+            <ul id="nav">
+                <li><a href="index.html"><div class="botonMenu">inicio</div></a></li>
+                <li>
+                    <a href="galeria.html"><div class="botonMenu active">Galeria</div></a>
+                </li>
+                <li>
+                    <a href="juegos.html"><div class="botonMenu">Juegos</div></a>
+                </li>
+                <li><a href="index.html"><div class="fa fa-home botonMenu inicio"></div></a></li>
+                <li><a href="otros.html"><div class="botonMenu">Otros</div></a></li>
+                <li><a href="contactar.php"><div class="botonMenu">Contactar</div></a></li>
+            </ul>
+        </div>
+        <a href="#body" class="ir-a-body"><i class="fa fa-chevron-down fa-3x"></i></a>
+        
+    </header>
+    
+    <div id="body" class="body galeria">
+    <h1 class="titulo1">UNDER THE SEA</h1>
+    <div class="main">
+      <div class="slides">
+        <img src="img/peces/barreleye.jpg" alt="">
+        <img src="img/peces/peces-betta.jpg" alt="">
+        <img src="img/peces/8043752224_7b39cf605e_h.jpg" alt="">
+      </div>
+    </div>
+    <script src="js/jquery.slides.js"></script>
+    <script>
+      $(function(){
+        $(".slides").slidesjs({
+          play: {
+            active: true,
+              // [boolean] Generate the play and stop buttons.
+              // You cannot use your own buttons. Sorry.
+            effect: "slide",
+              // [string] Can be either "slide" or "fade".
+            interval: 3000,
+              // [number] Time spent on each slide in milliseconds.
+            auto: true,
+              // [boolean] Start playing the slideshow on load.
+            swap: true,
+              // [boolean] show/hide stop and play buttons
+            pauseOnHover: false,
+              // [boolean] pause a playing slideshow on hover
+            restartDelay: 2500
+              // [number] restart delay on inactive slideshow
+          }
+        });
+      });
+    </script>
+        
+<!--  IMATGES   -->
+        <div class="imatges">
+            <canvas class="" id="canvasAnimation"></canvas>
+            <canvas class="" id='canvas'></canvas>
+        </div>
+	    <script src="js/Sprite.js"></script>
+	</div>
+	
+	
+	<footer>
+        <table>
+            <tr>
+                <td><a href="" class="fa fa-facebook"></a></td>
+                <td><a href="" class="fa fa-google"></a></td>
+                <td><a href="" class="fa fa-twitter"></a></td>
+                <td><a href="" class="fa fa-instagram"></a></td>
+            </tr>
+        </table>
+        <br>
+        <p>2017 © Lucas Pérez González</p>
+	</footer>
+</body>
+</html>

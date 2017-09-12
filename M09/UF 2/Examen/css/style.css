@@ -1,0 +1,494 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+  font-family : 'Roboto';
+}
+/* HEADER */ 
+h2.introduccion {
+    color: #333;
+    text-shadow: 0px 3px 4px rgba(0,0,0,.5);
+    text-transform: uppercase;
+    font-size: 180px;
+    padding: 15vh 0 0 0;
+  	font-family : 'Arial';
+}
+#intro {
+    background: url("../img/underOceanLight.jpeg") 50% 0 fixed;
+    background-size: auto 170vh;
+    height: calc(100vh - 200px);
+    width: 100%;
+    padding: 100px 0;
+}
+.intro-unit {
+    color: #ddd;
+    padding: 60px;
+    text-align: center;
+}
+#intro .cont{
+  position:relative;
+  height: 80px;
+  width: 100%;
+		display: flex;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+}
+#intro .contenidor{
+  display: flex;
+  width:650px;
+  height:180px;
+  line-height: 40px;
+  margin: 0 auto;
+  color: #BBB;
+  margin: auto;
+  overflow: hidden;
+}
+#intro .contenidor h2{
+  padding-top: 140px
+}
+#intro ul {
+  list-style: none;
+  padding-left: 0px;
+  margin-top: -40px;
+  animation-name: canvia ;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+#intro ul li{
+  list-style: none;
+  padding-left: 10px;
+}
+@keyframes canvia {
+  0%, 32%{
+    margin-top: -80px;
+  }
+  40%, 72%{
+    margin-top: -260px;
+  }
+  80%, 100%{
+    margin-top: -440px;
+  }
+}
+
+/* BODY */
+#bloque1 {
+		overflow: hidden;
+		margin-top: 700px;
+		height: 700px;
+    background-color: #000000;
+    margin: 0 auto;
+    width: 100%;
+}
+#bloque-img2 {
+    background: url("../img/UnderOceanFish.jpg") 50% 0 fixed ;
+    background-size: 100%;
+    height: 300px;
+    padding: 100px 0;
+}
+#bloque2 {
+    background-color: #5970DB;
+    margin: 0 auto;
+    width: 100%;
+    color: #fff;
+}
+#bloque3 {
+    background: url("../img/pattern.jpg");
+		margin: 0 auto;
+		padding: 60px 0;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+}
+#bloque4 {
+		background: #333;
+		margin: 0 auto;
+		padding: 60px 0;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+}
+#bloque-img4 {
+    background: url("../img/UnderOcean.jpg") 50% 0 fixed ;
+    background-size: 100%;
+    height: 300px;
+    padding: 100px 0;
+}
+
+/* PARALLAX */
+
+/*  @MEDIA = 580px  */
+@media(max-width:1000px){
+    #bloque-img2 {
+        background-size: 120%;
+        height: 100px;
+    }
+    #bloque-img4 {
+        background-size: 300%;
+        height: 100px;
+    }
+}
+
+/* FOOTER */
+footer{
+	padding: 50px 0;
+	background: #333;
+	color: darkgrey;
+	text-align: center;
+}
+footer p{
+	line-height: 30px
+}
+
+.cont50{
+  background: #333;
+  min-height: 700px;
+  color: #fff;
+  float: left;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+/* EXERCICI 3 */
+.tres {
+  width: 50%;
+  color: #fff;
+}
+
+.tres > div {
+  width: 100%;
+}
+
+.tres .title {
+  width: 100%;
+  padding: 5px 10px;
+  background: #000;
+}
+
+.tres .content {
+  height: 0px;
+  overflow: hidden;
+  width: 100%;
+  text-align: justify;
+  padding:  0 10px;
+  color: black;
+  background: #ccc;
+}
+
+/* CLOCK */
+.container-clock {
+  padding: 20px;
+  display: inline-block;
+}
+
+.clock {
+  border: 10px solid #FFF;
+  background: #53A1E6;
+  box-shadow: 0 0 70px 0 RGBA(0, 0, 0, 0.75);
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.clock:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  z-index: 1;
+}
+
+.clock > div {
+  position: absolute;
+  left: calc(50% - 2px);
+  width: 4px;
+  transform-origin: bottom;
+  background-color: #FFF;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.clock .lines1,
+.clock .lines2 {
+  background-color: #53A1E6 !important;
+  border-top: 20px solid #FFF;
+  border-bottom: 20px solid #FFF;
+  height: calc(100% - 60px);
+}
+
+.clock .lines1 {
+  top: 10px;
+}
+
+.clock .lines2 {
+  top: calc(-50% + 20px);
+  left: 8px !important;
+  transform: rotate(90deg);
+}
+
+.clock .hours {
+  height: 25%;
+  top: 25%;
+  animation-name: clock;
+  animation-duration: 43200s;
+}
+
+.clock .minutes {
+  height: 35%;
+  top: 15%;
+  animation-name: clock;
+  animation-duration: 720s;
+}
+
+.clock .seconds {
+  height: 40%;
+  top: calc(60% + 10px);
+  border-radius: 100px;
+  transform: rotateZ(180deg);
+  background-color: #aaa ;
+  animation-name: clock-second;
+  animation-duration: 1s;
+}
+.clock .seconds:before {
+  content: '';
+  position: absolute;
+  top: -25px;
+  left: -25px;
+  height: 50px;
+  width: 50px;
+  border-radius: 100px;
+  background-color: #aaa;
+}
+
+@keyframes clock {
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes clock-second {
+  0%, 100% {
+    transform: rotateZ(180deg);
+  }
+  25% {
+    transform: rotateZ(210deg);
+  }
+  75% {
+    transform: rotateZ(150deg);
+  }
+}
+
+
+.imagen-estatica{
+ width: 100%;
+ height: 100%;
+}
+/* BANNER */
+.banner{
+ width: 500px;
+ height: 300px;
+ border-radius: 500px;
+ margin:auto;
+ background-image: url("../img/OCUPADO.jpg");
+ background-size: 100% 100%;
+ animation: banner 10s linear infinite;
+}
+@keyframes banner{
+ 0%,20%{
+   background-image: url("../img/OCUPADO.jpg");
+   opacity: 1;
+ }
+ 24%{
+   opacity: 0.1;
+ }
+ 40%,60%{
+   background-image: url("../img/LIBRE.jpg");
+   opacity: 1;
+ }
+ 71%,74%{
+   opacity: 0.1;
+ }
+ 85%,95%{
+   background-image: url("../img/OCUPADO.jpg");
+   opacity: 1;
+ }
+}
+
+
+/* ANIMATION */
+.animation{
+	height: 300px;
+	padding: 100px 0;
+	position: relative;
+}
+.animation div{
+	height: 300px;
+	width: 100%;
+	position: absolute;
+}
+.animation .fish{
+	background: url("../img/Fish2.png") no-repeat;
+	background-size: auto 300px;
+	background-position-x: calc(100% + 530px);
+	animation: fish 5s linear infinite;
+	left: 0;
+	z-index: 1;
+}
+.animation .traffic{
+	background: url("../img/trafficGreen.png") no-repeat;
+	background-size: auto 300px;
+	background-position-x: 40%;
+	animation: traffic 5s linear infinite;
+}
+@keyframes fish{
+	0%{
+		background-position-x: calc(100% + 530px);
+	}
+	40%, 60%{
+		background-position-x: 70%;
+
+	}
+	100%{
+		background-position-x: -530px;
+	}
+}
+@keyframes traffic{
+	0%, 20%{
+		background-image: url("../img/trafficGreen.png");
+	}
+	20%, 30%{
+		background-image: url("../img/trafficYellow.png");
+	}
+	30%, 50%{
+		background-image: url("../img/trafficRed.png");
+	}
+	60%, 100%{
+		background-image: url("../img/trafficGreen.png");
+	}
+}
+
+/*   SLIDER   */
+.main-slider{
+	width:100%;
+	max-width:700px;
+}
+.slides {
+    background: #333;
+	width:100%;
+	max-width:700px;
+    position: relative;
+}
+.slides img {
+	height:100%;
+}
+
+/*   SLIDER NAVIGATION   */
+
+.slidesjs-navigation{
+	color:#fff;
+	text-decoration:none;
+    position: absolute;
+    top: calc((50% - 50px) - 21px);
+    z-index: 10;
+    height: 100px;
+    width: 45px;
+}
+
+.slidesjs-previous{
+  left: 30px;
+  background: rgba(51, 51, 51, 0.8);
+}
+.fa-chevron-left:before, .fa-chevron-right:before{
+  position: absolute;
+  top:  calc(50% - 20px);
+  font-size: 40px;
+  padding: 1px;
+  left: 8px;
+}
+.slidesjs-next{
+  right: 30px;
+  background: rgba(51, 51, 51, 0.8);
+}
+
+/*   SLIDER PAGINATION   */
+
+.slidesjs-pagination{
+  position: relative;
+  float: left;
+  left: 50%;
+  bottom: 0;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.slidesjs-pagination li {
+  float: left;
+  position: relative;
+  right: 50%;
+}
+.slidesjs-pagination li a {
+	padding: 20px;
+	color: #fff;
+	text-decoration: none;
+}
+.slides .active span .fa-circle{
+  opacity: 1;
+}
+.fa-circle{
+  opacity: 0;
+}
+
+/* SLIDER 2 */
+
+.slider2{
+  width:600px;
+  height: 400px;
+  margin: auto;
+  overflow: hidden;
+}
+.slider2 ul{
+  width: 100%;
+  padding: 0;
+  animation: canvi 10s infinite alternate;
+  animation-timing-function:linear;
+}
+.slider2 ul li{
+  width:100%;
+  text-align: center;
+  list-style: none;
+}
+.slider2 ul li img{
+ width: 100%;
+ height: 400px;
+}
+
+@keyframes canvi {
+  0%{margin-top:0;}
+  20%{margin-top: 0;}
+
+  25%{margin-top: -404px;}
+  45%{margin-top: -404px;}
+
+  50%{margin-top: -808px;}
+  70%{margin-top: -808px;}
+
+  75%{margin-top: -1212px;}
+  100%{margin-top: -1212px;}
+}
+

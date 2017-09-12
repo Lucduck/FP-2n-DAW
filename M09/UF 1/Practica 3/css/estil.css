@@ -1,0 +1,33 @@
+#contenidor{
+    margin: auto;
+    margin-top: 50px;
+    width: 960px;
+    height: 800px;
+    background-color: red;
+}
+#dreta{
+    width: 300px;
+    height: 500px;
+    background-color: green;
+    float: left;
+}
+#novetats{
+    width: 640px;
+    height: 200px;
+    background-color: blue;
+    float: right;
+}
+#centro{
+    margin-top: 20px;
+    width: 640px;
+    height: 580px;
+    background-color: purple;
+    float: right;
+}
+#groc{
+    margin-top: 20px;
+    width: 300px;
+    height: 280px;
+    background-color: yellow;
+    float: left;
+}

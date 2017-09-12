@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="img/favicon.ico">
+	<title>Examen M09 - Lucas</title>
+	<!-- PARA MOVILES -->
+	<meta name='viewport' content='width=device-width, user-scalable=no, initial-scale=1, maximum-scale=0.9, minimum-scale=0.9'>
+
+	<!-- FONT ROBOTO -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+
+	<!-- ICONS AWESOME -->
+	<link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' type='text/css' rel='stylesheet'>
+
+	<!--   CSS   -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!-- JQUERY -->
+	<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+
+	<!--  JS  -->
+	<script src="js/parallax.js"></script>
+	<script src="js/Punt3.js"></script>
+</head>
+
+<body>
+	<div id="intro" data-speed="4" data-type="background">
+		<div class="intro-unit">
+				<h2 class="introduccion">Under the</h2>
+			<div class="contenidor">
+				<ul>
+					<li><h2 class="introduccion">SEA</h2></li>
+					<li><h2 class="introduccion">LAKE</h2></li>
+					<li><h2 class="introduccion">OCEAN</h2></li>
+					<li><h2 class="introduccion">...</h2></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div id="bloque1" data-speed="2" data-type="background">
+		<div class="cont50">
+			<div class="tres">
+				<div>
+					<div class="title">Article 1</div>
+					<div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, sed. Placeat molestias labore ut possimus reiciendis deleniti nam numquam, minima!</div>
+				</div>
+				<div>
+					<div class="title">Article 2</div>
+					<div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore ullam maxime debitis provident eaque obcaecati, quae quo, est delectus assumenda, consequuntur ea optio incidunt vitae inventore fugiat laboriosam ipsam blanditiis id ut nisi? Nesciunt hic cum quasi error facilis placeat ad necessitatibus in minus at, consequatur autem, id ut iusto.</div>
+				</div>
+				<div>
+					<div class="title">Article 3</div>
+					<div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente culpa, itaque eius consequatur, a tenetur dolores quis saepe fuga soluta rem, temporibus eum optio molestiae architecto impedit cum explicabo iure.</div>
+				</div>
+				<div>
+					<div class="title">Article 4</div>
+					<div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, fugiat.</div>
+				</div>
+				<div>
+					<div onclick="amplia()" class="title">Article 5</div>
+					<div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore ullam maxime debitis provident eaque obcaecati, quae quo, est delectus assumenda, consequuntur ea optio incidunt vitae inventore fugiat laboriosam ipsam blanditiis id ut nisi? Nesciunt hic cum quasi error facilis placeat ad necessitatibus in minus at, consequatur autem, id ut iusto.</div>
+				</div>
+			</div>
+		</div>
+		<div class="cont50">
+			<div class="container-clock">
+				<div class="clock">
+					<div class="lines1"></div>
+					<div class="lines2"></div>
+					<div id="hours" class="hours"></div>
+					<div id="minutes" class="minutes"></div>
+					<div id="seconds" class="seconds"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="bloque-img2" data-speed="12" data-type="background">
+	</div>
+
+	<div id="bloque1" data-speed="2" data-type="background">
+		<div class="cont50">
+			<img class="imagen-estatica" src="img/pe1.jpg" alt="">
+		</div>
+		<div class="cont50">
+			<div class="banner"></div>
+		</div>
+	</div>
+
+	<div id="bloque-img2" data-speed="12" data-type="background">
+	</div>
+
+	<div id="bloque2" data-speed="4" data-type="background">
+		<div class="animation">
+			<div class="fish"></div>
+			<div class="traffic"></div>
+		</div>
+	</div>
+
+	<div id="bloque-img2" data-speed="12" data-type="background">
+	</div>
+
+	<div id="bloque3" data-speed="4" data-type="background">
+    <div class="main-slider">
+      <div class="slides">
+        <img src="img/barreleye.jpg" alt="">
+        <img src="img/peces-betta.jpg" alt="">
+        <img src="img/8043752224_7b39cf605e_h.jpg" alt="">
+      </div>
+    </div>
+    <script src="js/jquery.slides.js"></script>
+    <script>
+      $(function(){
+        $(".slides").slidesjs({
+          play: {
+            active: true,
+              // [boolean] Generate the play and stop buttons.
+              // You cannot use your own buttons. Sorry.
+            effect: "slide",
+              // [string] Can be either "slide" or "fade".
+            interval: 3000,
+              // [number] Time spent on each slide in milliseconds.
+            auto: true,
+              // [boolean] Start playing the slideshow on load.
+            swap: true,
+              // [boolean] show/hide stop and play buttons
+            pauseOnHover: false,
+              // [boolean] pause a playing slideshow on hover
+            restartDelay: 2500
+              // [number] restart delay on inactive slideshow
+          }
+        });
+      });
+    </script>
+	</div>
+
+	<div id="bloque-img2" data-speed="12" data-type="background">
+	</div>
+
+	<div id="bloque4" data-speed="2" data-type="background">
+		<div class="slider2">
+			<ul>
+				<li><img src="https://www.petdarling.com/articulos/wp-content/uploads/2014/12/el-perro-mas-caro-del-mundo.jpg" alt=""></li>
+				<li><img src="https://s-media-cache-ak0.pinimg.com/564x/31/9a/e1/319ae13fa2f85c05806df7e30b6cdcf1.jpg" alt=""></li>
+				<li><img src="http://www.wikipets.es/wp-content/uploads/sites/default/files/library/huron_2.jpg" alt=""></li>
+				<li><img src="http://www.abc.es/Media/201508/27/hurones2--478x270.jpg" alt=""></li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="bloque-img4" data-speed="12" data-type="background">
+	</div>
+
+	<footer>
+		<p><i class="fa fa-grav fa-fw"></i> Segon de DAW</p>
+		<p><i class="fa fa-calendar fa-fw"></i> Curs 2016-2017</p>
+		<p><i class="fa fa-book fa-fw"></i> Examen M09 - UF 2</p>
+		<p><i class="fa fa-user fa-fw"></i> Lucas Pérez González</p>
+		<br>
+    <p>2017 © Lucas Pérez González</p>
+	</footer>
+</body>
+
+</html>

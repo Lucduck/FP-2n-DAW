@@ -1,0 +1,87 @@
+body {
+	margin: 0;
+	padding: 0;
+	padding-top: 80px;
+	background: #f2f2f2; 
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+/*  HEADER */
+div#header{
+	height: 80px;
+	width: 100%;
+	left: 0;
+	top: 0; 
+	background: brown;
+	position: fixed;
+    z-index: 1;
+
+}
+
+/*  BODY  */
+#esquerra{
+    width: 20%;
+	min-width: 20%;
+    height: 330px;
+    background-color: yellow;
+    float: left;
+	margin: 10px auto;
+}
+div#body{
+    
+	background: white;
+	width: 70%;
+	max-width: 800px;
+    height: 100%;
+	margin: 10px 25% auto;
+	box-shadow: 0 0 10px rgba(0,0,0,.1);
+    
+}
+#dreta{
+    width: 100%;
+	max-width: 1000px;
+    height: 310px;
+    background-color: yellowgreen;
+    padding: 10px;
+}
+.dreta{
+    width: 150px;
+    height: 200px;
+    margin-bottom: 10px;
+    background-color: bisque;
+}
+#primer{
+    float: right;
+}
+#tercer{
+    width: 100%;
+    height: 100px;
+}
+
+
+
+
+/*  FOOTER  */
+div#footer{
+    
+	margin-top: 10px;
+	padding: 20px;
+	background: blue;
+	text-align: center;
+    z-index: 2;
+}
+#es{
+    width: 200px;
+    height: 100px;
+    background-color: cornflowerblue;
+}
+#dr{
+    float: right;
+    width: 100px;
+    height: 100px;
+    background-color: deepskyblue;
+    
+}

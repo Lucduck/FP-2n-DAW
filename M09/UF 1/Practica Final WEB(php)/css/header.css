@@ -1,0 +1,217 @@
+/*  HEADER */
+header{
+	height: 500px;
+	width: 100%;
+/*	margin: -80px auto;*/
+    display: flex;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    color: lightgray;
+}
+body{
+    background-color: #1b1f23;
+}
+.imgHeader{
+	height: 500px;
+	width: 100%;
+    opacity: 0.6;
+    background-image: url(../img/Carnivorous_plants.jpg);
+    background-position: center;
+    background-size: 100%;
+    position: absolute;
+}
+
+    /*  HEADER HAMBURGUESA  */
+    header label{
+        display: none;
+        width: 40px;
+        height: 40px;
+        padding: 7px;
+        border-right: 2px solid gray;
+        transition: 0.5s;
+	    font-size: 40px;
+    }
+    header label:hover{
+        cursor: pointer;
+        background: gray;
+        transition: 0.5s;
+    }
+    #btn-menu{
+        display: none;
+    }
+
+/*  MENU  */
+.menu{
+	position: absolute;
+    top: 380px;
+    justify-content: center;
+    text-align: center;
+}
+.menu *{
+    list-style:none;
+}
+#nav {
+    position: relative;
+}
+#nav > li:first-child{
+    display: none;
+}
+.botonMenu{
+    width: 140px;
+    padding: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 23px;
+    color: #333;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: white;
+/*    background-color:  rgba(255,255,255,0.7);*/
+	box-shadow: 0 0 20px rgba(0,0,0,.3);
+    float: left;
+}
+.botonMenu:hover, #nav > a:hover {
+    background-color: darkgrey;
+}
+
+.botonMenu ul, .botonMenu ol {
+    list-style:none;
+}
+#nav ul.subs {
+    width: 810px;
+    padding: 15px;
+    display: none;
+    position: absolute;
+    left: 10px;
+    top: 53px;
+    color: #333;
+    background-color:  rgba(255,255,255,1);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+#nav > li {
+    float: left;
+    text-align: left;
+}
+#nav li a {
+    display: block;
+    text-decoration: none;
+}
+.active{
+    background-color: #333;
+    color: #FFF;
+}
+
+/* HOME (icono de inicio) */
+.inicio{
+    position: relative;
+    width: 50px;
+    font-size: 50px;
+    top: -27px;
+}
+
+    /* SUBMENU (Menu desplegable) */
+    #nav li:hover ul.subs {
+        display: block;
+    }
+    #nav ul.subs > li {
+        display: inline-block;
+        float: none;
+        padding: 10px 1px;
+        vertical-align: top;
+        width: 400px;
+    }
+    #nav ul.subs > li a {
+        color: #333;
+        line-height: 20px;
+    }
+    #nav ul li a:hover {
+        color: #F55856;
+    }
+    #nav ul.subs > li > a {
+        font-size: 1.3em;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+    }
+    #nav ul.subs > li li {
+        padding-left: 8px;
+    }
+    #nav ul.subs > li li:hover {
+        padding-left: 15px;
+    }
+    #logo{
+        width: 100%;
+        max-width: 900px;
+        padding-top: 15px;
+        opacity: 0.9;
+    }
+
+/*  @MEDIA = 800px  */
+@media(max-width:880px){
+    header{
+	    height: auto;
+        justify-content: space-between;
+        background-color: #333;
+    }
+    .imgHeader{
+        display: none;
+    }
+    #logo{
+        padding: 0;
+        opacity: 1;
+        float: right;
+        height: 54px;
+        width: auto;
+    }
+    header label{
+        display:flex;
+    }
+    #btn-menu:checked~.menu{
+        margin-left: -1px;
+    }
+    .menu{
+        position: absolute;
+        background: #444;
+        width: 200px;
+        height: 0;
+        margin-left: -250px;
+        transition: all 0.5s;
+        top: 53px;
+    }
+    .botonMenu{
+        width: 100%;
+        min-width: 180px;
+        padding: 10px;
+        margin: 0;
+        font-size: 20px;
+        color: #444;
+        box-shadow: none;
+        border: 1px solid #333;
+        background-color: darkgray;
+        transition: all 0.7s;
+    }
+    .botonMenu:hover{
+        background-color: lightgray;
+        width: 220px;
+        height: 20px;
+        padding: 20px;
+        border: 1px solid #333;
+	    box-shadow: 0 0 20px rgba(0,0,0,.3);
+        color: #333;
+    }
+    #nav li:hover ul.subs {
+        display: none;
+    }
+    #nav > li:first-child{
+        display:flex;
+    }
+    /* HOME */
+    .inicio{
+        display: none;
+    }
+    /* Zona Actual */
+    .active{
+        background-color: #333;
+        color: #FFF;
+    }
+}

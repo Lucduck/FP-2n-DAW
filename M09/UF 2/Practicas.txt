@@ -1,0 +1,39 @@
+pokeball (canvas)
+  https://codepen.io/Luduck/pen/NbEzya
+
+Practica 1 - UF 2
+  https://codepen.io/Luduck/pen/jVQvGq
+
+Practica 2 -UF 2  
+  https://codepen.io/Luduck/pen/apNzyb
+
+Practica 3 - UF 2  
+  https://codepen.io/Luduck/pen/KazgwR
+
+Practica 5 - UF 2  
+  https://codepen.io/Luduck/pen/xRQQBq
+
+Practica 6 - UF 2  
+  https://codepen.io/Luduck/pen/mRPKNv
+
+Pt-28  
+  https://codepen.io/Luduck/pen/dNmXrm
+
+Pt-31
+  https://codepen.io/Luduck/pen/bgveLZ
+
+--- CLOCK ---
+
+Functional clock  
+  https://codepen.io/Luduck/pen/LWEmmw
+
+Reloj de agua  
+  https://codepen.io/Luduck/pen/GWNqLj
+
+Pendulum clock  
+  https://codepen.io/Luduck/pen/aJpbdq
+
+--- MEMORY GAME ---
+
+https://github.com/Lucduck/Power-Memory
+https://lucduck.github.io/Power-Memory/

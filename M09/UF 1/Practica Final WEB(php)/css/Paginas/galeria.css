@@ -1,0 +1,78 @@
+.body{
+    text-align: center;
+}
+a.lightbox{
+    text-decoration: none;
+}
+/* IMAGEN NORMAL  */
+a.lightbox img{
+    height: 150px;
+    border: 3px solid white;
+    box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+    margin: 20px;
+    transition: all 0.5s;
+}
+a.lightbox img:hover{
+	-webkit-transform: rotate(10deg);
+	-moz-transform: rotate(10deg);
+	rotation: 10deg;
+    transition: all 0.5s;
+}
+
+/*  LIGHTBOX  */
+.lightbox-target{
+    position: fixed;
+    width: 100%;
+    background: rgba(0,0,0,.7);
+    display: none;
+}
+.lightbox-target:target {
+    display: block;
+    top: 0;
+    bottom: 0;
+}
+
+.lightbox-target:target img {
+    width: 70%;
+    max-width: 800px;
+    max-height: 100%;
+    
+}
+
+/*  CRUZ  */
+a.lightbox-close {
+    font-size: 40px;
+    width: 50px;
+    height: 45px;
+    background: #fff;
+    color: #333;
+    position: absolute;
+    text-decoration: none;
+    right: 0;
+}
+
+.lightbox-target:target a.lightbox-close {
+    padding-top: 5px;
+    top: 0px;
+}
+
+/*  FLECHAS  */
+
+.imatge{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imatge img {
+    border: 3px solid white;
+    box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+    box-sizing: border-box;
+}
+.imatge a{
+    color: #fff;
+    font-size: 40px;
+    text-decoration: none;
+    margin: 0 10px;
+}

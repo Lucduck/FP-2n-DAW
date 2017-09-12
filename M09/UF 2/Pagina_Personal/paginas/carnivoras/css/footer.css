@@ -1,0 +1,28 @@
+/*  BODY  */
+footer{
+	padding: 20px;
+	background: #333;
+	color: darkgrey;
+	text-align: center;
+}
+footer a{
+	color: darkgrey;
+    text-decoration: none;
+}
+footer a:hover{
+	color: lightgray;
+}
+footer table{
+       margin: 0 auto;
+}
+footer table tr td{
+    width: 80px;
+    height: 50px;
+    font-size: 40px;
+}
+
+
+/*  @MEDIA = 800px  */
+@media(max-width:800px){
+    
+}

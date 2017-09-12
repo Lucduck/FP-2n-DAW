@@ -1,0 +1,257 @@
+/*  HEADER */
+header{
+    background-image: url(../img/nr1.jpg);
+    background-position: 50% 0px;
+    background-repeat: no-repeat;
+    background-size: auto 200vh;
+	height: 100vh;
+	width: 100%;
+    position: relative;
+    text-align: center;
+    color: lightgray;
+    transition: 0.5s;
+}
+header .titleIndex{
+    text-shadow: 0px 3px 4px rgba(0,0,0,.5);
+    text-transform: uppercase;
+    font-size: 180px;
+    padding: 15vh 0 0 0;
+} 
+header .titleIndex2{
+    text-shadow: 0px 3px 4px rgba(0,0,0,.5);
+    text-transform: uppercase;
+    font-size: 90px;
+    padding: 5vh 0 15vh 0;
+} 
+header .fa-chevron-down{
+    color: lightgray;
+    position: absolute;
+    left: calc(50% - 24px);
+    bottom: 0;
+}
+
+    /*  HEADER HAMBURGUESA  */
+    header label{
+        position: absolute;
+        top: 0;
+        padding: 2px 10px;
+        display: none;
+    }
+    header #btn-menu{
+        display: none;
+    }
+    #burger {
+        transition: all 0.5s;
+        width: 40px;
+        z-index: 1;
+        cursor: pointer;
+        position: relative;
+        display: block;
+    }
+
+    #burger .click {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        z-index: 99;
+        cursor: pointer;
+        display: block;
+    }
+
+    #burger span {
+        position: relative;
+        display: block;
+        width: 40px;
+        height: 5.5px;
+        background: url('http://img4.hostingpics.net/pics/293168burger1.png');
+        background-size: cover;
+        transition: all .4s ;
+        top: 20px;
+    }
+  
+    #burger span:before, #burger span:after {
+        position: absolute;
+        background: url('http://img4.hostingpics.net/pics/293168burger1.png');
+        background-size: cover;
+        content: '';
+        width: 40px;
+        height: 5.5px;
+        transition: all .2s ease;
+        left: 0
+    }
+    
+    #burger span:before {
+        top: -13px;
+    }
+    
+    #burger span:after {
+        top: 13px;
+    }
+
+    #burger.activeHamb span {
+        background: transparent;  
+        transform: rotate(90deg);
+    }
+
+    #burger.activeHamb span:before {
+        transform: rotate(45deg);
+        top: 0px;
+    }
+    
+    #burger.activeHamb span:after {
+        transform: rotate(-45deg);
+        top: 0px;
+    }
+  
+/*  MENU  */
+header .menu{
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+header .menu li{
+    align-self: auto;
+    list-style:none;
+}
+header #nav {
+    position: relative;
+}
+header #nav > li:first-child{
+    display: none;
+}
+header .botonMenu{ 
+    font-weight: bold;
+    min-width: 100px;
+    border-color: #ffffff;
+    background-color: transparent;
+    color: #ffffff;
+    -webkit-border-radius: 3px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 3px;
+    -moz-background-clip: padding;
+    border-radius: 3px;
+    background-clip: padding-box;
+    -webkit-transition: color 0.2s ease, border 0.2s ease, background 0.2s ease, -webkit-box-shadow 0.2s ease;
+    -moz-transition: color 0.2s ease, border 0.2s ease, background 0.2s ease, -moz-box-shadow 0.2s ease;
+    -o-transition: color 0.2s ease, border 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+    transition: color 0.2s ease, border 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    margin: 0 7px;
+    display: inline-block;
+    max-width: 100%;
+    padding: 15px 25px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    border-width: 1px;
+    border-style: solid;
+    background-color: transparent;
+}
+header .botonMenu:hover, header #nav > a:hover {
+    color: #1ac6ff;
+    background-color: #ffffff;
+    border-color: #ffffff;
+}
+
+header .botonMenu ul, header .botonMenu ol {
+    list-style:none;
+}
+header #nav > li {
+    float: left;
+    text-align: left;
+}
+header #nav li a {
+    display: block;
+    text-decoration: none;
+}
+header .active, header .active:hover{
+    background-color: #1ac6ff;
+    color: #FFF;
+    border: none
+}
+
+/* HOME (icono de inicio) */
+header .inicio{
+    min-width: 5px;
+    position: relative;
+    font-size: 50px;
+    margin-top: -17px;
+}
+
+/*  @MEDIA = 800px  */
+@media(min-width:880px){
+    header{
+        height: 100vh !important;
+    }
+    header .menu{
+        margin-left: auto !important;
+    }
+}
+@media(max-width:880px){
+    header{
+        background-size: auto 100vh;
+        background-position: 0;
+        height: 50px;
+        position: fixed;
+        z-index: 60
+    }
+    header #nav > li:first-child{
+        display: block;
+    }
+    header .ir-a-body{
+        display: none;
+    }
+    header label{
+        display:flex;
+    }
+    header .titleIndex{
+        font-size: 50px;
+        padding: 0;
+    } 
+    header .titleIndex2{
+        display: none;
+    } 
+    header .menu{
+        position: absolute;
+        width: 200px;
+        height: 0;
+        margin-left: -250px;
+        transition: all 0.5s;
+        top: 53px;
+    }
+    header .botonMenu{
+        align-self: auto;
+        width: 100%;
+        min-width: 180px;
+        padding: 10px;
+        margin: 10px;
+        font-size: 20px;
+        box-shadow: none;
+    }
+    /* HOME */
+    header .inicio{
+        display: none;
+    }
+    /* Zona Actual */
+    header .active, header .active:hover{
+        border: 1px solid #1ac6ff;
+    }
+}
+

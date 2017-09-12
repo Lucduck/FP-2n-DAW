@@ -1,0 +1,140 @@
+.body > div{
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.Seccion > h1{
+  font-size: 50px;
+  font-family: 'Press Start 2P';
+}
+
+/* MEMORY */
+#Memory {
+	padding: 6px 4px;
+	width:600px;
+	height:452px;
+  position:relative;
+	margin: 20px 0
+}
+#Memory h2, #Memory h6, #Memory p{
+  font-family: 'Press Start 2P';
+}
+#Memory .blockTEXT {
+  position: absolute;
+  left: calc(50% - (748px / 2));
+  top: calc(459px / 2 - (370px / 2));
+	width:628px;
+	height:250px;
+  background: #F3B96A;
+  font-family: 'Press Start 2P' !important;
+  text-align:center;
+  color: #182443;
+  padding: 50px;
+  border: 10px solid grey;
+  line-height:85px;
+  display: none;
+  z-index: 2;
+  font-size: 50px;
+}
+#Memory .blockTEXT p{
+  font-size: 40px;
+}
+#Memory .blockTEXT p:hover{
+  color: #556AA0;
+  cursor: pointer;
+}
+#Memory .blockTEXT h6{
+  color: #E0607C;
+}
+#Memory #fondo{
+	width:100%;
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  display: none;
+}
+#Memory .box{
+	text-align:left;
+	width:auto;
+	height:auto;
+  background-color:red;
+}
+
+/* TIC-TAC-TOE */
+#TicTacToe {
+	width: 482px;
+	height: 495px;
+  align-items: center;
+  justify-content: center;
+	padding: 6px 4px;
+  position:relative;
+	margin: 20px 0;
+  display: flex;
+}
+#TicTacToe .block-3R {
+  z-index: 1;
+}
+#TicTacToe h1, #TicTacToe p{
+  font-family: 'Press Start 2P';
+}
+#TicTacToe .blockTEXT-3R {
+  position: absolute;
+  left: calc(50% - (860px / 2));
+  top: calc(50% - (260px / 2));
+	width:800px;
+	height:200px;
+  background: #F3B96A;
+  text-align:center;
+  font-size: 50px;
+  color: #182443;
+  padding: 20px;
+  border: 10px solid grey;
+  opacity: 0;
+}
+#TicTacToe #fondo-3R{
+	width:100%;
+	height:100%;
+  position: absolute;
+}
+
+#TicTacToe .blockTEXT-3R p:hover{
+  color: #556AA0;
+  cursor: pointer;
+}
+
+#TicTacToe .box-3R{
+	text-align:left;
+	width:auto;
+	height:auto;
+  background-color:red;
+}
+
+#TicTacToe canvas{
+  background: #333333;
+}
+
+@media(max-width:900px){
+  .Seccion{
+    overflow: hidden;
+  }
+}
+@media(max-width:700px){
+  .titulo1 > img{
+    width: 100%;
+  }
+  .Seccion > div{
+    transform: scale(0.5)
+  }
+}

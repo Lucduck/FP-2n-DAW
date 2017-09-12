@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="img/favicon.ico">
+	<title>LUDUCK</title>
+<!-- PARA MOVILES -->
+    <meta name='viewport' content='width=device-width, user-scalable=no, initial-scale=1, maximum-scale=0.9, minimum-scale=0.9'>
+    
+<!-- FONTS -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+
+<!-- ICONS AWESOME -->
+    <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'  type='text/css' rel='stylesheet'>
+
+<!--   CSS   -->
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/estil.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/Paginas/juegos.css">
+    
+<!-- JQUERY -->
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    
+<!--  JS  -->
+	  <script src="js/ir-arriba.js"></script>
+</head>
+<body>
+    
+    <a href="#"><span class="ir-arriba fa fa-chevron-up"></span></a>
+    
+	<header>
+        <h1 class="titleIndex">Mermaid</h1>
+        <h2 class="titleIndex2">Juegos</h2>
+        <input type="checkbox" id="btn-menu">
+        <label for="btn-menu">	
+            <div id="burger">
+                <div class="click"></div>
+                <span></span>
+            </div>
+        </label>
+        <div class="menu">
+            <ul id="nav">
+                <li><a href="index.html"><div class="botonMenu active">inicio</div></a></li>
+                <li>
+                    <a href="galeria.html"><div class="botonMenu">Galeria</div></a>
+                </li>
+                <li>
+                    <a href="juegos.html"><div class="botonMenu active">Juegos</div></a>
+                </li>
+                <li><a href="index.html"><div class="fa fa-home botonMenu inicio"></div></a></li>
+                <li><a href="otros.html"><div class="botonMenu">Otros</div></a></li>
+                <li><a href="contactar.php"><div class="botonMenu">Contactar</div></a></li>
+            </ul>
+        </div>
+        <a href="#body" class="ir-a-body"><i class="fa fa-chevron-down fa-3x"></i></a>
+        
+    </header>
+    
+    <div id="body" class="body">
+        <div class="Seccion">
+          <h1 class="titulo1"><img src="img/MEMORY-GAME.png" alt=""></h1>
+            <div id="Memory">
+              <div id='fondo'></div>
+              <div id='wonblock' class='blockTEXT'>
+                  <h2 id='won'>YOU WIN!</h2>
+                  <h6 id='points'></h6>
+                  <p id='playAgain'>PLAY AGAIN!</p>
+              </div>
+              <div class='block'>
+                  <div id ='box'></div>
+              </div>
+            </div>
+        </div>
+
+
+      
+        <div class="Seccion">
+          <h1 class="titulo1"><img src="img/TIC-TAC-TOE.png" alt=""></h1>
+            <div id="TicTacToe">
+              <div id="fondo-3R"></div>
+              <div id="wonblock-3R" class="blockTEXT-3R">
+                  <h1 id="won-3R"></h1>
+                  <br />
+                  <p onclick="playAgain3R()">PLAY AGAIN!</p>
+              </div>
+              
+              <div class="block-3R">
+                <div id ="box-3R">
+                  <canvas id = "3R-canvas1"  width="150" height="150" style="border:4px solid grey" onclick="Clicked3R(1)"></canvas>
+                  <canvas id = "3R-canvas2"  width="150" height="150" style="border:4px solid grey" onclick="Clicked3R(2)"></canvas>
+                  <canvas id = "3R-canvas3"  width="150" height="150" style="border:4px solid grey" onclick="Clicked3R(3)"></canvas><br/>
+                  <canvas id = "3R-canvas4"  width="150" height="150" style="border:4px solid grey" onclick="Clicked3R(4)"></canvas>
+                  <canvas id = "3R-canvas5"  width="150" height="150" style="border:4px solid grey" onclick="Clicked3R(5)"></canvas>
+                  <canvas id = "3R-canvas6"  width="150" height="150" style="border:4px solid grey" onclick="Clicked3R(6)"></canvas><br/>
+                  <canvas id = "3R-canvas7"  width="150" height="150" style="border:4px solid grey" onclick="Clicked3R(7)"></canvas>
+                  <canvas id = "3R-canvas8"  width="150" height="150" style="border:4px solid grey" onclick="Clicked3R(8)"></canvas>
+                  <canvas id = "3R-canvas9"  width="150" height="150" style="border:4px solid grey" onclick="Clicked3R(9)"></canvas>
+                </div>
+              </div>
+            </div>
+        </div>
+	</div>
+	
+	<footer>
+        <script src="js/parejas.js"></script>
+        <script src="js/TicTacToe.js"></script>
+        <script>
+        window.onload = function () {
+          //PAREJAS
+            // painted = new Array()
+            numerosExos = []
+            tablero = []
+            content = ['1', '1', '2', '2', '3', '3', '4', '4', '5', '5', '6', '6']
+            colors = ['#6758A4', '#EE7A71', '#57B668', '#EED671', '#7D52A0', '#EEAA71']
+
+            for (let i = 1; i <= 12; i++) {
+              paint(i, '?', '#C9608E', '#250A1A')
+            }
+            // Montar tablero
+            for (let i = 0; i <= 11; i++) {
+              let Total = content.length
+              for (let j = 0; j < Total; j++) {
+                let aleatorio = Math.floor(Math.random() * (content.length))
+                tablero[j] = content[aleatorio]
+                content.splice(aleatorio, 1)
+              }
+            }
+          
+          // TIC-TAC-TOE
+            painted3R = []
+            content3R = []
+            winningCombinations3R = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]
+
+            for (var l = 0; l <= 8; l++) {
+              painted3R[l] = false
+              content3R[l] = ''
+            }
+        }
+        </script>
+        <table>
+            <tr>
+                <td><a href="" class="fa fa-facebook"></a></td>
+                <td><a href="" class="fa fa-google"></a></td>
+                <td><a href="" class="fa fa-twitter"></a></td>
+                <td><a href="" class="fa fa-instagram"></a></td>
+            </tr>
+        </table>
+        <br>
+        <p>2017 © Lucas Pérez González</p>
+	</footer>
+</body>
+</html>

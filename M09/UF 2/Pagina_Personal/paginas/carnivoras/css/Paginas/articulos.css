@@ -1,0 +1,25 @@
+table *{
+    padding: 5px;
+}
+.imagen{
+    width: 100%;
+    text-align: center;
+}
+.Seccion img{
+    width: 100%;
+}
+
+/* Mida diferente en cada articulo, lo he puesto por motivos de calidad de las imagenes*/
+#invernadero img{
+    max-width: 500px;
+}
+#reproduccion img{
+    max-width: 200px;
+}
+#agua img{
+    max-width: 300px;
+}
+
+/*  @MEDIA = 800px  */
+@media(max-width:800px){
+}
